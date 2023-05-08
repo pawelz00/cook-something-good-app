@@ -34,3 +34,32 @@
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
 }
+
+.login {
+  width:50%;
+  text-align: center;
+  margin:auto;
+  padding: 200px 0;
+}
+
+.login-button {
+  width:50%;
+  margin:auto;
+}
+
+.error-page {
+  width:50%;
+  text-align: center;
+  margin:auto;
+  padding: 300px 0;
+}
+
+.error-page-font {
+  font-size: 32px;
+}
+
+.error-page-button {
+  width:50%;
+  font-size:24px;
+  margin:auto;
+}

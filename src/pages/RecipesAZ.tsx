@@ -1,36 +1,21 @@
 import React from 'react';
 import RecipeLetter from '../components/RecipeLetter';
+import { Link } from 'react-router-dom';
 
 function RecipesAZ() {
+
+  
+  const alpha = Array.from(Array(26)).map((e, i) => i + 65);
+  const alphabet = alpha.map((x) => String.fromCharCode(x));
+
+  const alphabetElements = alphabet.map(letter => {
+    return <Link to={`/recipes/${letter.toLowerCase()}`}><RecipeLetter key={letter} letter={letter}/></Link>
+  })
+
   return (
     <main className='container'>
     <div className='parent'>
-        <RecipeLetter letter='A'/>
-        <RecipeLetter letter='B'/>
-        <RecipeLetter letter='C'/>
-        <RecipeLetter letter='D'/>
-        <RecipeLetter letter='E'/>
-        <RecipeLetter letter='F'/>
-        <RecipeLetter letter='G'/>
-        <RecipeLetter letter='H'/>
-        <RecipeLetter letter='I'/>
-        <RecipeLetter letter='J'/>
-        <RecipeLetter letter='K'/>
-        <RecipeLetter letter='L'/>
-        <RecipeLetter letter='M'/>
-        <RecipeLetter letter='N'/>
-        <RecipeLetter letter='O'/>
-        <RecipeLetter letter='P'/>
-        <RecipeLetter letter='Q'/>
-        <RecipeLetter letter='R'/>
-        <RecipeLetter letter='S'/>
-        <RecipeLetter letter='T'/>
-        <RecipeLetter letter='U'/>
-        <RecipeLetter letter='V'/>
-        <RecipeLetter letter='W'/>
-        <RecipeLetter letter='X'/>
-        <RecipeLetter letter='Y'/>
-        <RecipeLetter letter='Z'/>
+        {alphabetElements}
     </div>
     </main>
   );

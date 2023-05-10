@@ -9,7 +9,7 @@ function Login() {
         </h1>
         <input type="text" placeholder='Enter your username...'/>
         <input type="password" placeholder='Enter your password...'/>
-        <Link to={'/'}>
+        <Link to={'/recipes'}>
             <button className='login-button'>Login</button>
         </Link>
     </main>

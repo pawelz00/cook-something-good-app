@@ -6,3 +6,4 @@ v1.0.1:
     - Added NavBar
     - Added Login page
     - Added basic pages in pages folder
+    - Added axios

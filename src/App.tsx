@@ -1,33 +1,41 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, BrowserRouter, Route, Routes } from "react-router-dom";
+import Categories from './pages/Categories';
+import Login from './pages/Login';
+import RandomRecipe from './pages/Random-Recipe';
+import RecipesAZ from './pages/RecipesAZ';
+import RecipesAZList from './pages/RecipesAZList';
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
     <nav className="container">
       <ul>
         <li><strong>CookSomethingGood</strong></li>
-        {/* <li><a href="#">Recipes A-Z</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Random recipe!</a></li> */}
         <li>
-          <Link to={'recipes'}>Recipes A-Z</Link>
+          <Link to={'/recipes'}>Recipes A-Z</Link>
         </li>
         <li>
-          <Link to={'categories'}>Categories</Link>
+          <Link to={'/categories'}>Categories</Link>
         </li>
         <li>
-          <Link to={'random'}>Random recipe!</Link>
+          <Link to={'/random'}>Random recipe!</Link>
         </li>
-        <li>
-          <Link to={'login'}>Logout</Link>
+      </ul>
+      <ul>
+      <li>
+          <Link to={'/'}>Logout</Link>
         </li>
       </ul>
     </nav>
-    <main className='container'>
-      <Outlet/>
-    </main>
-    </>
+      <Routes>
+        <Route path="/recipes" element={<RecipesAZ/>}/>
+        <Route path="/recipes/:letter" element={<RecipesAZList/>}/>
+        <Route path="/categories" element={<Categories/>}/>
+        <Route path="/random" element={<RandomRecipe/>}/>
+      </Routes>
+      </BrowserRouter>
   );
 }
 

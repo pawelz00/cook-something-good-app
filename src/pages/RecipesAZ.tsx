@@ -14,7 +14,7 @@ function RecipesAZ() {
 
   return (
     <main className='container'>
-    <div className='parent'>
+    <div className='recipes-az-container'>
         {alphabetElements}
     </div>
     </main>

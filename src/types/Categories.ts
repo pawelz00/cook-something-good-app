@@ -1,4 +1,4 @@
-export interface Categories {
+export interface CategoriesType {
     categories: Category[]
   }
   

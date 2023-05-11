@@ -1,5 +1,5 @@
 import http from "../http-common"
-import { Categories } from "../types/Categories";
+import { CategoriesType } from "../types/Categories";
 import { ListOfMeals } from "../types/Meals"
 
 const getSingleMeal = (id: any) => {
@@ -19,7 +19,7 @@ const getMealsByLetter = (letter: any) => {
 }
 
 const getCategories = () => {
-    return http.get<Categories>(`categories.php`);
+    return http.get<CategoriesType>(`categories.php`);
 }
 
 const ApiService = {

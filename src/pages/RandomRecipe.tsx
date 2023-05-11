@@ -6,26 +6,33 @@ import Recipe from '../components/Recipe';
 const RandomRecipe: React.FC = () => {
 
   const [recipe, setRecipe] = useState<ListOfMeals>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getRandomRecipe();
   }, []);
 
-  const getRandomRecipe = () => {
-    ApiService.getRandomMeal()
+  const getRandomRecipe = async () => {
+    await ApiService.getRandomMeal()
       .then((response: any) => {
         setRecipe(response.data);
-        //console.log(response.data);
+        setIsLoading(false);
       })
       .catch((e: Error) => {
         console.log(e);
       });
   };
 
-  console.log(recipe);
-
   return(
-    <Recipe recipe={recipe?.meals[0]}/>
+      isLoading ? (
+        <main className='container'>
+          <article>
+            <h1>Loading...</h1>
+          </article>
+        </main>
+      ) : (
+        <Recipe recipe={recipe?.meals[0]}/>
+      )
   );
 }
 

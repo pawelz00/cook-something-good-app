@@ -84,7 +84,6 @@
 }
 
 .recipe-box {
-  /* background-color: #e91e63; */
   background-color:#c2185b;
   width: 120px;
   height: 120px;
@@ -101,7 +100,7 @@
 }
 
 .recipes-az-container {
-  margin-top:5px;
+  margin-top:10px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -135,4 +134,6 @@
   margin:20px;
   top:0;
   right:0;
+  border-radius:50%;
 }
+

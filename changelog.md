@@ -14,3 +14,4 @@ v1.0.2:
     - Created http-common with axios
     - Created Recipe component
     - Created RandomRecipe page
+    - Created types

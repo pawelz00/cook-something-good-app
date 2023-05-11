@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ListOfMeals } from '../types/Meals';
 import ApiService from '../services/ApiService';
 import RecipeTile from '../components/RecipeTile';
@@ -27,9 +27,13 @@ function RecipesAZList() {
       });
   };
 
-  const mealsList = meals?.meals.map((meal) => {
-    return <RecipeTile name={meal.strMeal} img={meal.strMealThumb}></RecipeTile>
-  });
+  const mealsList = meals && meals.meals ? meals.meals.map((meal) => {
+    return (
+      <Link to={`${meal.idMeal}`} key={meal.idMeal}>
+        <RecipeTile name={meal.strMeal} img={meal.strMealThumb} />
+      </Link>
+    );
+  }) : null;
 
   return (
     <main className='container'>

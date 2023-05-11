@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 import Categories from './pages/Categories';
-import RandomRecipe from './pages/Random-Recipe';
+import RandomRecipe from './pages/RandomRecipe';
 import RecipesAZ from './pages/RecipesAZ';
 import RecipesAZList from './pages/RecipesAZList';
 import Layout from './components/Layout';

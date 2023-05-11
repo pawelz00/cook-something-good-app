@@ -1,5 +1,5 @@
 import React from 'react';
-import RecipeLetter from '../components/RecipeLetter';
+import RecipeLetterTile from '../components/RecipeLetterTile';
 import { Link } from 'react-router-dom';
 
 function RecipesAZ() {
@@ -9,7 +9,7 @@ function RecipesAZ() {
   const alphabet = alpha.map((x) => String.fromCharCode(x));
 
   const alphabetElements = alphabet.map(letter => {
-    return <Link to={`/recipes/${letter.toLowerCase()}`}><RecipeLetter key={letter} letter={letter}/></Link>
+    return <Link to={`/recipes/${letter.toLowerCase()}`}><RecipeLetterTile key={letter} letter={letter}/></Link>
   })
 
   return (

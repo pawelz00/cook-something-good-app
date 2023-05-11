@@ -16,7 +16,7 @@ const Recipe: React.FC<RecipeProps> = (props) => {
                     <h6>Category: {recipe?.strCategory}, Area: {recipe?.strArea}</h6>
                     <img alt={recipe?.strMeal} className="recipe-img" src={recipe?.strMealThumb}/>
                 </header>
-                    <p>Ingredients:
+                    <p><h6>Ingredients:</h6>
                         <p>
                         <span>{recipe?.strIngredient1 ?? `${recipe?.strIngredient1}`} </span>    
                         <span>{recipe?.strMeasure1 ?? `${recipe?.strIngredient1} `} </span>    

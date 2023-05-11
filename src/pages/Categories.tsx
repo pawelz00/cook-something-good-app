@@ -26,7 +26,7 @@ const Categories: React.FC = () => {
   };
 
   const categoriesEl = categories?.categories.map((category) => {
-    return <Link to={`/categories/${category.strCategory.toLowerCase()}`}><CategoryTile category={category.strCategory} img={category.strCategoryThumb}/></Link>
+    return <Link to={`/categories/${category.strCategory}`}><CategoryTile category={category.strCategory} img={category.strCategoryThumb}/></Link>
   });
 
   return (

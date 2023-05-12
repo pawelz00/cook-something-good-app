@@ -5,7 +5,7 @@ interface RecipeTile {
     img: string;
 }
 
-function RecipeTile({name, img}:RecipeTile) {
+const RecipeTile = ({name, img}:RecipeTile): JSX.Element => {
   return (
     <div className='recipe-az-list-box'>
         <img alt={name} src={img}></img>

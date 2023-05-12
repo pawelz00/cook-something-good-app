@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Footer() {
+const Footer = () : JSX.Element => {
   return (
     <footer className="footer">
-      <p>App created by 13383</p>
+      <p>Created by 13383</p>
     </footer>
   );
 }

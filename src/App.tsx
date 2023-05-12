@@ -7,9 +7,10 @@ import CategoriesRecipesList from './pages/CategoriesRecipesList';
 import RandomRecipe from './pages/RandomRecipe';
 import SingleRecipe from './pages/SingleRecipe';
 import Home from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Routes>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/categories/:category" element={<CategoriesRecipesList/>}/>
           <Route path="/categories/:category/:id" element={<SingleRecipe/>}/>
           <Route path="/random" element={<RandomRecipe/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
         </Route>
       </Routes>
       </BrowserRouter>

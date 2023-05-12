@@ -5,9 +5,9 @@ interface RecipeProps {
     recipe: Meal | undefined;
 }
 
-const Recipe: React.FC<RecipeProps> = (props) => {
+const Recipe = ({recipe}: RecipeProps): JSX.Element =>  {
 
-    const { recipe } = props;
+    //const { recipe } = props;
 
     return (
         <main className='container recipe-container'>

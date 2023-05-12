@@ -3,7 +3,7 @@ import { ListOfMeals} from '../types/Meals';
 import ApiService from '../services/ApiService';
 import Recipe from '../components/Recipe';
 
-const RandomRecipe: React.FC = () => {
+const RandomRecipe = () : JSX.Element => {
 
   const [recipe, setRecipe] = useState<ListOfMeals>();
   const [isLoading, setIsLoading] = useState(true);

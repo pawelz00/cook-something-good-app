@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Login() {
+const Login = () : JSX.Element => {
   return (
     <main className='container login'>
         <h1 className='login-main-text'>

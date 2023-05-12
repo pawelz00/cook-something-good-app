@@ -5,7 +5,7 @@ interface CategoryTile {
     img: string;
 }
 
-function CategoryTile({category, img}:CategoryTile) {
+const CategoryTile = ({category, img}:CategoryTile) : JSX.Element => {
   return (
     <div className='category-box'>
         <img alt={category} src={img}/>

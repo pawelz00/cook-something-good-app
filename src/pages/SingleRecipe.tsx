@@ -4,7 +4,7 @@ import ApiService from '../services/ApiService';
 import Recipe from '../components/Recipe';
 import { Link, useParams } from 'react-router-dom';
 
-const SingleRecipe: React.FC = () => {
+const SingleRecipe = () : JSX.Element => {
 
   const params = useParams();
 

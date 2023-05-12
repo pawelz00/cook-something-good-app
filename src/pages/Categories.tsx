@@ -5,7 +5,7 @@ import RecipeLetter from '../components/RecipeLetterTile';
 import CategoryTile from '../components/CategoryTile';
 import { Link } from 'react-router-dom';
 
-const Categories: React.FC = () => {
+const Categories = () : JSX.Element => {
 
   const [categories, setCategories] = useState<CategoriesType>();
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,11 @@ const Categories: React.FC = () => {
   };
 
   const categoriesEl = categories?.categories.map((category) => {
-    return <Link to={`/categories/${category.strCategory}`}><CategoryTile category={category.strCategory} img={category.strCategoryThumb}/></Link>
+    return (
+    <Link key={category.idCategory} to={`/categories/${category.strCategory.toLowerCase()}`}>
+      <CategoryTile category={category.strCategory} img={category.strCategoryThumb}/>
+    </Link>
+    );
   });
 
   return (

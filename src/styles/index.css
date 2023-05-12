@@ -35,6 +35,21 @@
   --switch-checked-background-color: var(--primary);
 }
 
+.app-name-navbar {
+  font-size:1.2rem;
+  font-weight: bold;
+  color:#B2BEBF;
+}
+
+.app-name-navbar:focus {
+  background-color:rgba(0, 0, 0,0);
+}
+
+.navbar-focus {
+  background-color: rgba(216, 27, 96, 0.25);
+  border-radius:30px;
+}
+
 .login {
   width:50%;
   text-align: center;
@@ -210,4 +225,9 @@ hr {
   font-size:0.8rem;
   font-weight: 400;
   color:#FFF;
+}
+
+.home-page {
+  margin-top:30px;
+  padding:10px;
 }

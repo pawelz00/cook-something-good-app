@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import CategoriesRecipesList from './pages/CategoriesRecipesList';
 import RandomRecipe from './pages/RandomRecipe';
 import SingleRecipe from './pages/SingleRecipe';
+import Home from "./pages/Home";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout/>}>
+          <Route index element={<Home/>}/>
           <Route path="/recipes" element={<RecipesAZ/>}/>
           <Route path="/recipes/:letter" element={<RecipesAZList/>}/>
           <Route path="/recipes/:letter/:id" element={<SingleRecipe/>}/>

@@ -1,25 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+
     return (
     <nav className="container">
         <ul>
-            <li><strong>CookSomethingGood</strong></li>
+            <li><Link className="app-name-navbar" to={'.'}>CookSomethingGood</Link></li>
             <li>
-                <Link to={'/recipes'}>Recipes A-Z</Link>
+                <NavLink className={({isActive}) => isActive ? "navbar-focus" : undefined} to={'recipes'}>Recipes A-Z</NavLink>
             </li>
             <li>
-                <Link to={'/categories'}>Categories</Link>
+                <NavLink className={({isActive}) => isActive ? "navbar-focus" : undefined} to={'categories'}>Categories</NavLink>
             </li>
             <li>
-                <Link to={'/random'}>Random recipe!</Link>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <Link to={'/'}>Logout</Link>
+                <NavLink className={({isActive}) => isActive ? "navbar-focus" : undefined} to={'random'}>Random recipe!</NavLink>
             </li>
         </ul>
+        {/* <ul>
+            <li>
+                <NavLink to={'/'}>Logout</NavLink>
+            </li>
+        </ul> */}
     </nav>
     );
 }

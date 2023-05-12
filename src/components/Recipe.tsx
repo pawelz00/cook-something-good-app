@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Meal } from '../types/Meals';
 
 interface RecipeProps {
@@ -10,6 +11,7 @@ const Recipe: React.FC<RecipeProps> = (props) => {
 
     return (
         <main className='container recipe-container'>
+            <Link relative="path" to="..">&larr; <span>Back</span></Link>
             <article>
                 <header>
                     <h2>{recipe?.strMeal}</h2>

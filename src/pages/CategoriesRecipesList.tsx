@@ -37,6 +37,7 @@ function CategoriesRecipesList() {
 
   return (
     <main className='container'>
+    <Link relative="path" to="..">&larr; <span>Back</span></Link>
     <div className='recipes-az-list-container'>
       {mealsList}
     </div>

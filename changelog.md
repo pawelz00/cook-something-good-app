@@ -15,3 +15,8 @@ v1.0.2:
     - Created Recipe component
     - Created RandomRecipe page
     - Created types
+    - Created Categories page
+    - Created RecipeTile component
+    - Created CategoryTile component
+v1.0.3
+    - Created Home page

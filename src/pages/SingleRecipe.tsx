@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ListOfMeals} from '../types/Meals';
 import ApiService from '../services/ApiService';
 import Recipe from '../components/Recipe';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleRecipe: React.FC = () => {
 

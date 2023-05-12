@@ -39,6 +39,13 @@ const RecipesAZList = () : JSX.Element => {
   }) : null;
 
   return (
+    isLoading ? (
+      <main className='container'>
+        <article>
+          <h1>Loading...</h1>
+        </article>
+      </main>
+    ) :
     <main className='container'>
     <Link relative="path" to="..">&larr; <span>Back</span></Link>
     <input className='search-input' onChange={(e) => setSearch(e.target.value)} type='text' placeholder='Search...'/>

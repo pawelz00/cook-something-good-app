@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CategoriesType } from '../types/Categories';
 import ApiService from '../services/ApiService';
-import RecipeLetter from '../components/RecipeLetterTile';
 import CategoryTile from '../components/CategoryTile';
 import { Link } from 'react-router-dom';
 

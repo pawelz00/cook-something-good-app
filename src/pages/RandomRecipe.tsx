@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ListOfMeals} from '../types/Meals';
 import ApiService from '../services/ApiService';
 import Recipe from '../components/Recipe';
+import { useLoaderData } from 'react-router-dom';
 
 const RandomRecipe = () : JSX.Element => {
 

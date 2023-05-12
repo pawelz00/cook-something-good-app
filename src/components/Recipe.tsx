@@ -6,9 +6,6 @@ interface RecipeProps {
 }
 
 const Recipe = ({recipe}: RecipeProps): JSX.Element =>  {
-
-    //const { recipe } = props;
-
     return (
         <main className='container recipe-container'>
             <Link relative="path" to="..">&larr; <span>Back</span></Link>

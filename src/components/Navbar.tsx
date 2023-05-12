@@ -16,11 +16,6 @@ const Navbar = () : JSX.Element => {
                 <NavLink className={({isActive}) => isActive ? "navbar-focus" : undefined} to={'random'}>Random recipe!</NavLink>
             </li>
         </ul>
-        {/* <ul>
-            <li>
-                <NavLink to={'/'}>Logout</NavLink>
-            </li>
-        </ul> */}
     </nav>
     );
 }

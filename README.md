@@ -12,5 +12,5 @@
 `npm install`
 2. Lokalny start aplikacji
 `npm start`
-3. Inicjalizacja testów
+3. Uruchomienie testów
 `npm test`
